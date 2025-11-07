@@ -1,23 +1,13 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace ApiProyecto.Models
+namespace ApiProyecto.DTOs.Rotacion
 {
-    public class Rotacion
+    public class CreateRotacionDto
     {
-        [Key]
-        public int ID_Rotacion { get; set; }
-
-        [ForeignKey("Producto")]
         public int ID_Producto { get; set; }
-
-        [ForeignKey("Estudiante")]
         public int ID_Estudiante { get; set; }
-
-        [ForeignKey("Tutor")]
         public int ID_Tutor { get; set; }
-
-        [ForeignKey("Turno")]
         public int ID_Turno { get; set; }
 
         public int Cantidad_Entregada { get; set; }
@@ -27,11 +17,5 @@ namespace ApiProyecto.Models
         public string Observaciones { get; set; }
         public string Usuario_Registro { get; set; }
         public DateTime Fecha_Registro { get; set; }
-
-        // 🔗 Relaciones
-        public virtual Turno? Turno { get; set; }
-        public virtual Producto? Producto { get; set; }
-        public virtual Estudiante? Estudiante { get; set; }
-        public virtual Tutor? Tutor { get; set; }
     }
 }

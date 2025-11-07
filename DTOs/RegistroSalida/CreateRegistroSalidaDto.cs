@@ -3,21 +3,11 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace ApiProyecto.DTOs.RegistroSalida
 {
-    public class RegistroSalidaDto
+    public class CreateRegistroSalidaDto
     {
-        [Key]
-        public int ID_Registro_Salida { get; set; }
-
-        [ForeignKey("Producto")]
         public int ID_Producto { get; set; }
-
-        [ForeignKey("Tutor")]
         public int ID_Tutor { get; set; }
-
-        [ForeignKey("Aula")]
         public int ID_Aula { get; set; }
-
-        [ForeignKey("Turno")]
         public int ID_Turno { get; set; }
 
         public int Cantidad_Entregada { get; set; }

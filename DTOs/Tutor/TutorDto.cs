@@ -1,11 +1,14 @@
-﻿namespace ApiProyecto.DTOs.Tutor
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace ApiProyecto.DTOs.Tutor
 {
     public class TutorDto
     {
-        public int IdTutor { get; set; }
-        public string Nombre { get; set; } = string.Empty;
-        public string Apellido { get; set; } = string.Empty;
-        public string Telefono { get; set; } = string.Empty;
-        public string Correo { get; set; } = string.Empty;
+        [Key]
+        public int ID_Tutor { get; set; }
+        public string Nombre { get; set; } 
+        public string Apellido { get; set; } 
+        public string Telefono { get; set; } 
+        public string Correo { get; set; } 
     }
 }

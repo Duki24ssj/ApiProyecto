@@ -1,23 +1,10 @@
-﻿using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
-
-namespace ApiProyecto.DTOs.Rotacion
+﻿namespace ApiProyecto.DTOs.Rotacion
 {
-    public class RotacionDto
+    public class UpdateRotacionDto
     {
-        [Key]
-        public int ID_Rotacion { get; set; }
-
-        [ForeignKey("Producto")]
         public int ID_Producto { get; set; }
-
-        [ForeignKey("Estudiante")]
         public int ID_Estudiante { get; set; }
-
-        [ForeignKey("Tutor")]
         public int ID_Tutor { get; set; }
-
-        [ForeignKey("Turno")]
         public int ID_Turno { get; set; }
 
         public int Cantidad_Entregada { get; set; }

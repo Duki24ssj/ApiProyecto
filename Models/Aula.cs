@@ -15,6 +15,6 @@ namespace ApiProyecto.Models
 
         // 🔗 Relaciones
         public virtual Tutor? Tutor { get; set; }
-        public virtual ICollection<Registro_Salida> Registro_Salida { get; set; }
+        public virtual ICollection<Registro_Salida> Registro_Salida { get; set; } = new List<Registro_Salida>();
     }
 }

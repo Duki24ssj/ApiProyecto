@@ -9,7 +9,7 @@ namespace ApiProyecto.Models
         public string Nombre_Turno { get; set; }
 
         // 🔗 Relaciones
-        public virtual ICollection<Registro_Salida> RegistrosSalida { get; set; }
-        public virtual ICollection<Rotacion> Rotaciones { get; set; }
+        public virtual ICollection<Registro_Salida> RegistrosSalida { get; set; } = new List<Registro_Salida>();
+        public virtual ICollection<Rotacion> Rotaciones { get; set; } = new List<Rotacion>();
     }
 }
